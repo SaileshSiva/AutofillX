@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AutofillX.iml" filepath="$PROJECT_DIR$/AutofillX.iml" group="AutofillX" />
+      <module fileurl="file://$PROJECT_DIR$/afservice/afservice.iml" filepath="$PROJECT_DIR$/afservice/afservice.iml" group="AutofillX/afservice" />
+    </modules>
+  </component>
+</project>

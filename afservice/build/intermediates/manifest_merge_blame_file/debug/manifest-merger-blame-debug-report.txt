@@ -1,0 +1,143 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.android.autofill.service"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+8-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:4:5-67
+11-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:4:22-64
+12
+13    <application
+13-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:6:5-88:19
+14        android:allowBackup="true"
+14-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:7:9-35
+15        android:debuggable="true"
+16        android:extractNativeLibs="false"
+17        android:icon="@mipmap/ic_launcher"
+17-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:8:9-43
+18        android:supportsRtl="true"
+18-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:9:9-35
+19        android:testOnly="true"
+20        android:theme="@style/AppTheme" >
+20-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:10:9-40
+21        <service
+21-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:13:9-23:19
+22            android:name="com.example.android.autofill.service.MyAutofillService"
+22-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:14:13-46
+23            android:label="Multi-Dataset Autofill Service"
+23-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:15:13-59
+24            android:permission="android.permission.BIND_AUTOFILL_SERVICE" >
+24-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:16:13-74
+25            <meta-data
+25-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:17:13-19:64
+26                android:name="android.autofill"
+26-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:18:17-48
+27                android:resource="@xml/multidataset_service" />
+27-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:19:17-61
+28
+29            <intent-filter>
+29-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:20:13-22:29
+30                <action android:name="android.service.autofill.AutofillService" />
+30-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:21:17-83
+30-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:21:25-80
+31            </intent-filter>
+32        </service>
+33        <!--
+34        <service
+35            android:name=".simple.BasicService"
+36            android:label="Basic Autofill Service"
+37            android:permission="android.permission.BIND_AUTOFILL_SERVICE">
+38            <intent-filter>
+39                <action android:name="android.service.autofill.AutofillService" />
+40            </intent-filter>
+41        </service>
+42
+43        <service
+44            android:name=".simple.DebugService"
+45            android:label="Debug Autofill Service"
+46            android:permission="android.permission.BIND_AUTOFILL_SERVICE">
+47            <meta-data
+48                android:name="android.autofill"
+49                android:resource="@xml/debug_service"/>
+50            <intent-filter>
+51                <action android:name="android.service.autofill.AutofillService" />
+52            </intent-filter>
+53        </service>
+54
+55        <service
+56            android:name=".simple.MultiStepsService"
+57            android:label="Multiple-steps Service"
+58            android:permission="android.permission.BIND_AUTOFILL_SERVICE">
+59            <intent-filter>
+60                <action android:name="android.service.autofill.AutofillService" />
+61            </intent-filter>
+62        </service>
+63        -->
+64        <activity
+64-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:55:9-58:59
+65            android:name="com.example.android.autofill.service.AuthActivity"
+65-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:56:13-41
+66            android:label="@string/authentication_name"
+66-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:58:13-56
+67            android:taskAffinity=".AuthActivity" />
+67-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:57:13-49
+68        <activity
+68-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:60:9-63:59
+69            android:name="com.example.android.autofill.service.simple.SimpleAuthActivity"
+69-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:61:13-54
+70            android:label="@string/authentication_name"
+70-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:63:13-56
+71            android:taskAffinity=".simple.SimpleAuthActivity" />
+71-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:62:13-62
+72        <activity
+72-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:65:9-68:51
+73            android:name="com.example.android.autofill.service.ManualActivity"
+73-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:66:13-43
+74            android:label="@string/manual_name"
+74-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:68:13-48
+75            android:taskAffinity=".ManualActivity" />
+75-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:67:13-51
+76        <activity
+76-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:70:9-73:64
+77            android:name="com.example.android.autofill.service.ManualFieldPickerActivity"
+77-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:71:13-54
+78            android:label="@string/manual_field_picker_name"
+78-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:73:13-61
+79            android:taskAffinity=".ManualActivity" />
+79-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:72:13-51
+80
+81        <!--
+82        Including launcher icon for Autofill Settings to convenience. Not necessary for a
+83        real service.
+84        -->
+85        <activity
+85-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:77:9-86:20
+86            android:name="com.example.android.autofill.service.settings.SettingsActivity"
+86-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:78:13-54
+87            android:exported="true"
+87-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:79:13-36
+88            android:label="@string/settings_name"
+88-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:80:13-50
+89            android:taskAffinity=".settings.SettingsActivity" >
+89-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:81:13-62
+90            <intent-filter>
+90-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:82:13-85:29
+91                <action android:name="android.intent.action.MAIN" />
+91-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:83:17-69
+91-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:83:25-66
+92
+93                <category android:name="android.intent.category.LAUNCHER" />
+93-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:84:17-77
+93-->C:\Users\Sailesh\Downloads\Compressed\AutofillX\afservice\src\main\AndroidManifest.xml:84:27-74
+94            </intent-filter>
+95        </activity>
+96    </application>
+97
+98</manifest>
